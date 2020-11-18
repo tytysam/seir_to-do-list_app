@@ -20,7 +20,7 @@ For this homework, you will be creating a to do list using React.
 - Capturing Input
 
 ## Requirements
-- When the app loads, your app should render a list of items from a array of data. You can use the data below.
+- When the page loads, your app should render a list of items from an array of data. You can use the data below to get started.
 
 ```js
   const toDoListData = [
@@ -39,13 +39,13 @@ For this homework, you will be creating a to do list using React.
   ];
 ```
 
-- If the item is not completed, render the item on the page
-- Your app shoould have an input that allows the user to enter a new to do item
-- When the user submits the form (presses enter) the value in the input should be added as an item on your to do list.
+- If the item is not completed, render the item on the page.
+- Your app should have an input that allows the user to enter a new item to the to do list.
+- When the user submits the form (presses enter) the value in the input should be added as an item on your to do list. 
 
 ### Bonuses
-- Allow the user to complete an item by clicking on it. When the user clicks on a list item, toggle its completed state to true and no longer display that item. 
-- If you get the above bonus completed, try refactoring your app so that the items which are completed remain on the page with a strike through them
+- Allow the user to complete an item by clicking on it. When the user clicks on a list item, toggle its completed property to true and no longer display that item. 
+- If you get the above bonus completed, try refactoring your app so that the items which are completed remain on the page with a strike through them.
 - Style your to do list according to the [Working Example](https://2s8g5.csb.app/) 
 
 ## Deliverables
