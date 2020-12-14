@@ -4,7 +4,7 @@
 
 ## Tasks
 
-1) **Fork and clone** this repository into your `W07D05` directory
+1) **Fork and clone** this repository into your `W08D01` directory
 
 2) **Do:** [To Do List](to-do-list.md)
 
