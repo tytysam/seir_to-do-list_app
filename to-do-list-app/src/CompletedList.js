@@ -8,9 +8,8 @@ const CompletedList = ({ completedList, removeFromList }) => {
         {completedList.map((item, index) => {
           if (item.completed === true) {
             return (
-              <li>
-                <p>{item.title}</p>
-                <button onClick={() => removeFromList(index)}>Remove</button>
+              <li className="strikethrough">
+                <p onClick={() => removeFromList(index)}>{item.title}</p>
               </li>
             );
           } else {

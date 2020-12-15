@@ -10,10 +10,7 @@ const ToDoListOutput = ({ toDoItems, completeToDoItem }) => {
           if (item.completed === false) {
             return (
               <li>
-                <p>{item.title}</p>
-                <button onClick={() => completeToDoItem(index)}>
-                  Completed
-                </button>
+                <p onClick={() => completeToDoItem(index)}>{item.title}</p>
               </li>
             );
           } else {

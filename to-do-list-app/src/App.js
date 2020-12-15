@@ -53,32 +53,43 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <div className="to-do-container">
-          <h1>My To-Do List</h1>
-          <form onSubmit={handleSubmit}>
-            <label>New Item:</label>
-            <br />
-            <input
-              type="text"
-              id="title"
-              value={toDoTitle}
-              onChange={(event) => setTitle(event.target.value)}
-            />
-          </form>
+    <html lang="en" dir="ltr">
+      <head>
+        <script
+          src="https://kit.fontawesome.com/0f84f97a69.js"
+          crossOrigin="anonymous"
+        ></script>
+      </head>
 
-          <ToDoListOutput
-            toDoItems={toDoItems}
-            completeToDoItem={completeToDoItem}
-          />
-          <CompletedList
-            completedList={completedList}
-            removeFromList={removeFromList}
-          />
+      <body>
+        <div className="App">
+          <header className="App-header">
+            <div className="to-do-container">
+              <h1>My To-Do List</h1>
+              <form onSubmit={handleSubmit}>
+                <label>New Item:</label>
+                <br />
+                <input
+                  type="text"
+                  id="title"
+                  value={toDoTitle}
+                  onChange={(event) => setTitle(event.target.value)}
+                />
+              </form>
+
+              <ToDoListOutput
+                toDoItems={toDoItems}
+                completeToDoItem={completeToDoItem}
+              />
+              <CompletedList
+                completedList={completedList}
+                removeFromList={removeFromList}
+              />
+            </div>
+          </header>
         </div>
-      </header>
-    </div>
+      </body>
+    </html>
   );
 }
 
