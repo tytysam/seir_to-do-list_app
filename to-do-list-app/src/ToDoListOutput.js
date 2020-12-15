@@ -2,12 +2,12 @@ import React, { useState } from "react";
 
 const ToDoListOutput = ({ toDoItems, completeToDoItem }) => {
   return (
-    <div>
+    <div className="to-be-done-container">
       <hr></hr>
-      <h3>To Do Items:</h3>
+      <h3>Still To Do:</h3>
       <ul>
         {toDoItems.map((item, index) => {
-          if (item.completed === false) {
+          if (item.completed === false && item.title) {
             return (
               <li>
                 <p onClick={() => completeToDoItem(index)}>{item.title}</p>

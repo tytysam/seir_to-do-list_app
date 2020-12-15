@@ -55,6 +55,7 @@ function App() {
   return (
     <html lang="en" dir="ltr">
       <head>
+        <link rel="stylesheet" href="https://use.typekit.net/xmh6snq.css" />
         <script
           src="https://kit.fontawesome.com/0f84f97a69.js"
           crossOrigin="anonymous"
@@ -67,12 +68,12 @@ function App() {
             <div className="to-do-container">
               <h1>My To-Do List</h1>
               <form onSubmit={handleSubmit}>
-                <label>New Item:</label>
+                <label>New List Item: </label>
+
                 <br />
                 <input
                   type="text"
                   id="title"
-                  value={toDoTitle}
                   onChange={(event) => setTitle(event.target.value)}
                 />
               </form>

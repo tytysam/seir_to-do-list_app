@@ -1,53 +1,136 @@
+:root {
+  --primaryColorLight: #fdfbf5;
+  --primaryColorDark: #202020;
+
+  --accentColorYellow: #f6a800;
+
+  --boxShadowColor: rgba(32, 32, 32, 0.3);
+
+  --onHoverHighlightLight: rgba(246, 168, 0, 0.2);
+}
+
 * {
-  color: #282c34;
+  color: var(--primaryColorDark);
+}
+
+body {
+  font-family: montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
+  background-color: var(--primaryColorLight);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--primaryColorLight);
 }
 
 .to-do-container {
-  background-color: gainsboro;
-  border: 1px solid #282c34;
+  background-color: var(--primaryColorLight);
+  border: 5px solid var(--primaryColorDark);
+  border-radius: 10px;
 
   min-width: 50vw;
+  min-height: 80vh;
 
-  padding: 10px;
-  margin: 15px;
+  padding: 25px;
+
+  transition: box-shadow ease-in 250ms;
+}
+
+.to-do-container:hover {
+  box-shadow: 5px 5px 15px var(--boxShadowColor);
+
+  transition: box-shadow ease-in 250ms;
+}
+
+.to-do-container h1 {
+  padding-bottom: 5px;
+  background: url("./wave-design-yellow.svg");
+  background-repeat: repeat;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-size: auto auto;
+  background-repeat: repeat-x;
+  background-size: 20px 10px;
+  animation: move 15s linear infinite;
+  -webkit-animation: move 15s linear infinite;
+
+  animation-play-state: paused;
+  /* animation-play-state: running; */
+
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+.to-do-container h1:hover {
+  animation-play-state: running;
+}
+
+h1 {
+  font-family: lust-display, serif;
+  font-size: 40px;
+  font-weight: 600;
+  font-style: normal;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 50%;
+}
+
+ul {
+  list-style-type: none;
+
+  text-align: center;
+  display: inline;
 }
 
 li {
   cursor: pointer;
+  text-align: center;
+  padding-bottom: 2px;
 }
 
 label {
   font-size: 22px;
+  margin-bottom: 15px;
 }
 
 input {
+  min-width: 350px;
   font-size: 20px;
+  padding: 5px;
+  margin-bottom: 10px;
+
+  background-color: var(--primaryColorLight);
+
+  border: 2px solid var(--primaryColorDark);
+  border-radius: 5px;
+}
+
+.to-be-done-container {
+  min-height: 15vh;
+
+  text-align: center;
+}
+
+.completed-container {
+  min-height: 15vh;
+
+  text-align: center;
+}
+
+hr {
+  width: 85%;
+  margin: 25px auto;
 }
 
 h3 {
@@ -55,16 +138,43 @@ h3 {
   text-decoration: underline;
 }
 
-button {
-  width: 30%;
-  height: 25px;
+ul {
+  width: 100%;
 }
 
 p {
-  color: #282c34;
+  color: var(--primaryColorDark);
   font-size: 14px;
+  font-weight: 500;
+}
+
+p:hover {
+  background-color: var(--onHoverHighlightLight);
 }
 
 .strikethrough {
   text-decoration: line-through;
+}
+
+/* ============================================================================================= */
+/* /////////////////// */
+/*     ANIMATIONS      */
+/* /////////////////// */
+
+@keyframes move {
+  from {
+    background-position: 2px 50px;
+  }
+  to {
+    background-position: 500px 50px;
+  }
+}
+
+@-webkit-keyframes move {
+  from {
+    background-position: 2px 50px;
+  }
+  to {
+    background-position: 500px 50px;
+  }
 }
